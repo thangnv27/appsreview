@@ -1,0 +1,1010 @@
+/*
+Theme Name: Appps Review
+Theme URI: 
+Description: The 2013 default theme for WordPress.
+Author: Ngo Van Thang
+Author URI: http://ngovanthang.info/
+Version: 1.0
+Tags: 
+
+License:
+License URI:
+
+General comments (optional).
+*/
+
+@font-face
+{
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.ttf'),
+        url('fonts/rockwell.eot'), /*IE*/
+        url('fonts/rockwell.ttf');
+}
+
+﻿/********** RESET **********/
+html,body{
+    width: 100%;
+    height: 100%;
+}
+html, body, span, object, iframe, abbr, acronym, address, code,del, dfn, em, q, fieldset, form, label, legend,caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;	outline-style:none;outline-width:0;outline-color:-moz-use-text-color;font-weight:normal;}
+body {
+    margin:0px;padding:0px;font-size:13px;color:#333;font-family:'Open Sans';
+    min-width: 1260px;
+}
+table { border-collapse: separate; border-spacing: 0; }
+select, input, textarea {background-color: #FFFFFF; font-size:14px;font-family:'Open Sans';}
+input, textarea { padding: 0px;font-family:'Open Sans';}
+form { border: none; margin: 0px; padding: 0px; display:inline; }
+a{color:#333; outline: none;}a:hover{}a:link, a:active, a:visited {text-decoration: none; }
+a:focus{border: none;}
+a img {border:0;}img {border: none;}
+input.op_btn{padding:0px; margin:1px 0px 0px -1px; border:none; background:none;_width:14px; _height:14px;vertical-align:top;}	
+input.chk_btn{padding:0px; margin:0px; border:none; width:13px; height:13px; background:none;vertical-align:bottom;}
+textarea{resize:none;}
+input:active{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+input:focus{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+textarea:active{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+textarea:focus{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+select:active{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+select:focus{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+/********** end: RESET **********/
+
+.input{border: 1px solid #d0d0d0; font: 12px 'Open Sans'; padding: 3px;}
+.warning{font: 13px 'Open Sans'; color: red;}
+.success{font: 13px 'Open Sans'; color: green;}
+
+/*Header style*/
+#header{ min-width: 1260px; z-index: 1000 !important;}
+.head_bar{
+    /*overflow: hidden;*/
+    height: 82px;
+    padding-left: 20px;
+    /*background: url("images/bg_menu.png") repeat-x top left;*/
+    background: #000;
+}
+.head_bar .nav_bar{
+    float: left;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+}
+.head_bar .nav_bar li
+{
+    float: left;
+    margin-top: 15px;
+    margin-left: 40px;
+    list-style: none;
+}
+.head_bar .nav_bar li:first-child
+{
+    margin-left: 0;
+}
+.head_bar .nav_bar .logo_bar{
+    margin-top: 13px;
+}
+.head_bar .nav_bar .logo_bar img{
+    max-width: 220px;
+    height: 50px;
+    border: none;
+    float: left;
+}
+.head_bar .nav_bar .logo_bar .logo_text{
+    font: 28px Rockwell;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.head_bar .nav_bar .nav-menu{
+}
+.head_bar .nav_bar .nav-menu ul{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.head_bar .nav_bar .nav-menu ul li{
+    display: inline;
+    float: left;
+    position: relative;
+}
+.head_bar .nav_bar .nav-menu ul li a{
+    font: 10pt Helvetica; text-transform: uppercase;
+    color: #999999;
+}
+.head_bar .nav_bar .nav-menu ul li.active a, .head_bar .nav_bar .nav-menu ul li a:hover{
+    font: 10pt Helvetica; color: #ffffff;
+}
+.head_bar .nav_bar .nav-menu ul li .menu li a{text-transform: none;}
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu{
+    display: none; position: absolute; top: 44px; left: -5px; width: 150px;
+    background:#F6F5EF url(images/arrow_top.png) no-repeat 0 0;
+    border-radius: 0 0 5px 5px; padding: 5px 0; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*border-right: 1px solid #888582; border-left: 1px solid #888582;; border-bottom: 1px solid #888582;*/
+}
+.head_bar .nav_bar .nav-menu ul li.nav-apps:hover .menu{ display: block; }
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu li{
+    display: block; float: none; padding: 3px 0px; margin: 0; 
+}
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu li a{color: #716b65; padding: 3px 10px; font-size: 15px;}
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu li a:hover{color: #f6f5ef;}
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu li:hover{background: #111111;}
+.head_bar .nav_bar .nav-menu ul li.nav-apps .menu li:hover a{color: #f6f5ef;}
+.head_bar .nav_bar .nav-menu ul li.nav-news a{padding-bottom: 31px;}
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu{
+    display: none; position: absolute; top: 44px; left: -5px; width: 150px;
+    background:#F6F5EF url(images/arrow_top.png) no-repeat 0 0;
+    border-radius: 0 0 5px 5px; padding: 5px 0; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*border-right: 1px solid #888582; border-left: 1px solid #888582;; border-bottom: 1px solid #888582;*/
+}
+.head_bar .nav_bar .nav-menu ul li.nav-news:hover .menu{ display: block; }
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu li{
+    display: block; float: none; padding: 3px 0px; margin: 0; 
+}
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu li a{color: #716b65; padding: 3px 10px; font-size: 15px;}
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu li a:hover{color: #f6f5ef;}
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu li:hover{background: #111111;}
+.head_bar .nav_bar .nav-menu ul li.nav-news .menu li:hover a{color: #f6f5ef;}
+.head_bar .nav_bar .nav-menu .icons-ios{
+    background: url("images/icons/ios.png") no-repeat left 1px;
+    padding: 7px 0 30px 28px;
+}
+.head_bar .nav_bar .nav-menu .icons-ios:hover, .head_bar .nav_bar .nav-menu .active .icons-ios{
+    background: url("images/icons/ios_active.png") no-repeat left 1px;
+}
+.head_bar .nav_bar .nav-menu .icons-android{
+    background: url("images/icons/android.png") no-repeat left 1px;
+    padding: 5px 0 30px 28px;
+}
+.head_bar .nav_bar .nav-menu .icons-android:hover, .head_bar .nav_bar .nav-menu .active .icons-android{
+    background: url("images/icons/android_active.png") no-repeat left 1px;
+}
+.head_bar .nav_bar .nav-search{
+    margin-top: 20px !important;
+}
+.head_bar .nav_bar .nav-search .input-search1{
+    border: none; border-radius: 3px;
+    height: 24px;
+    font: 13px Arial;
+    color: #cccccc;
+    width: 384px;
+    padding: 8px;
+    background: url(images/bg_input_search.png) no-repeat 0 0;
+}
+.head_bar .nav_bar .nav-search .input-search2{
+    border: none; border-radius: 3px;
+    height: 24px;
+    font: 13px Arial;
+    color: #cccccc;
+    width: 284px;
+    padding: 8px;
+    background: url(images/bg_input_search2.png) no-repeat 0 0;
+}
+.head_bar .nav_bar .nav-search input[type='text']:focus{color: #323131;}
+
+.head_bar .user-bar{
+    float: right; padding-top: 20px; padding-right: 18px;
+}
+.head_bar .user-bar .avatar{
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    float: left;
+}
+.head_bar .user-bar .avatar img {
+    width: 38px; height: 38px; border: 1px solid #fff;
+}
+.head_bar .user-bar .user_options{
+    margin: 0; padding: 0; float: right; margin-left: 13px; position: relative;
+}
+.head_bar .user-bar .user_options li{
+    list-style: none; display: block;
+}
+.head_bar .user-bar .user_options li a{
+    font: 13px Arial; color: #ffffff;
+}
+.head_bar .user-bar .user_options li a:hover{
+    color: #ededed;
+}
+.head_bar .user-bar .user_options li.display_name a{
+    font-weight: bold; background: url(images/arrow_down.png) no-repeat right 6px;
+    padding-right: 15px; padding-left: 10px;
+}
+.head_bar .user-bar .user_options li.display_name:hover{
+    background: #ffffff; padding-bottom: 3px;
+}
+.head_bar .user-bar .user_options li.display_name:hover a{
+    color: #333333; padding-bottom: 3px;
+}
+.head_bar .user-bar .user_options li.display_name:hover ul{
+    display: block;
+}
+.head_bar .user-bar .user_options li.display_name ul{
+    margin: 0; padding: 10px; position: absolute; background: #fff; top: 18px; right: 0; width: 140px; display: none;
+}
+.head_bar .user-bar .user_options li.display_name ul li a{
+    background:  none; color: #666666;
+}
+.head_bar .user-bar .user_options li.display_name ul li{
+    padding-bottom: 5px;
+}
+.head_bar .user-bar .user_options li.display_name ul li a:hover{
+    color: #000000;
+}
+.head_bar .user-bar .user_options li.logout{padding-top: 7px; padding-left: 10px;}
+.head_bar .user-bar .user_options li.logout a{ color: #999999;}
+
+/*Top content*/
+#top_content{
+    width: 100%; margin-top: -2px; padding: 20px 0 20px; min-width: 1260px;
+    background: #443f41 url(images/bg_top.png) repeat 0 0;
+}
+.wrapper{width: 1180px; margin: 0 auto;}
+#top_content .logo-banner{width: 100%; height: 90px; overflow: hidden;}
+#top_content .logo{float: left; width: 450px;}
+#top_content .logo img{
+    height: 90px; max-width: 450px;
+    border: none;
+}
+/*#top_content .banner{float: right; width: 728px; background: #e1e1e1;}
+#top_content .banner img{width: 728px; height: 90px; border: none;}*/
+#top_content .banner{width: 100%; background: #e1e1e1;}
+#top_content .banner img{width: 1180px; height: 90px; border: none;}
+
+/*Top stories*/
+.top-stories{
+    /*margin-top: 20px;*/
+}
+.top-stories .group1{float: left; width: 460px; height: 460px; position: relative; margin-right: 20px;}
+.top-stories .group1 .thumb img{
+    width: 460px; height: 460px;
+    border: none;
+}
+.top-stories .group1 .title{
+    position: absolute; bottom: 0;
+    background: url(images/bg_caption.png) repeat;
+    /*opacity: 0.7;*/
+    padding: 15px;
+    width: 430px;
+    max-height: 430px;
+}
+.top-stories .group1 .title a{
+    font: normal 24px "Open Sans";
+    color: #ffffff;
+}
+.top-stories .group1 .title a:hover{
+    color: #dbdbdb;
+}
+.top-stories .group1 h1{
+    font: normal 24px "Open Sans";
+    margin: 0;
+}
+
+.top-stories .group2{float: right; height: 460px; width: 700px;}
+.top-stories .group2 .group2-item{float: left; width: 220px; height: 220px; position: relative; margin-right: 20px;}
+.top-stories .group2 .group2-item .thumb img{
+    width: 220px; height: 220px;
+    border: none;
+}
+.top-stories .group2 .group2-item .title{
+    position: absolute; bottom: 0;
+    background: url(images/bg_caption.png) repeat;
+    /*opacity: 0.7;*/
+    padding: 15px;
+    width: 190px;
+    max-height: 190px;
+}
+.top-stories .group2 .group2-item .title a{
+    font: normal 16px "Open Sans";
+    color: #ffffff;
+}
+.top-stories .group2 .group2-item .title a:hover{
+    color: #dbdbdb;
+}
+.top-stories .group2 .group2-item h3{
+    font: normal 16px "Open Sans";
+    margin: 0;
+}
+/*main home*/
+.main-content{
+    width: 940px;
+    float: left;
+}
+.main-content .tabs-news{
+    margin-top: 25px;
+}
+.main-content .tabs-news ul{
+    margin: 0;
+    padding: 0;
+    height: 47px;
+    border-bottom: 1px solid #999999;
+}
+.main-content .tabs-news ul li{
+    list-style: none;
+    float: left;
+    font: 18px "Open Sans";
+    color: #cccccc;
+    padding-bottom: 21px;
+    cursor: pointer;
+    outline: none;
+}
+.main-content .tabs-news ul li.ui-tabs-active{
+    border-bottom: 3px solid #000000;
+}
+.main-content .tabs-news ul li.ui-tabs-active a{
+    color: #000;
+}
+.main-content .tabs-news ul li a{
+    /*font: 18px "Open Sans";*/
+    font: 12pt Helvetica;
+    color: #cccccc;
+    padding: 0 0 21px;
+}
+
+.tab-news{
+    margin:20px 0;
+}
+.tab-news .item{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.tab-news .item .thumb{
+    width: 220px; height: 220px;
+    float: left;
+}
+.tab-news .item .thumb img{
+    width: 220px; height: 220px;
+}
+.tab-news .item .content{
+    float: right;
+    height: 220px;
+    width: 700px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.tab-news .item .content .item-title a{
+    /*font: 24px "Open Sans";*/
+    font:bold 20pt Helvetica;
+    color: #000000;
+}
+.tab-news .item .content .item-title a:hover{
+    color: orangered;
+}
+.tab-news .item .content .item-meta{
+    /*font: 13px "Open Sans";*/
+    font:bold 11px Helvetica;
+    color: #000000;
+    padding-top: 8px;
+}
+.tab-news .item .content .item-meta a{
+    /*font: 13px "Open Sans";*/
+    font:bold 11px Helvetica;
+    color: #000000;
+}
+.tab-news .item .content .item-description{
+    /*font: 14px "Open Sans";*/
+    font: 13px Helvetica;
+    color: #000000;
+    padding-top: 8px;
+}
+.tab-news .item .content .item-description h1, .tab-apps .item .content .item-description h1{
+    font: normal 24px "Open Sans"; margin: 0 0 15px;
+}
+.tab-news .item .content .item-description h2, .tab-apps .item .content .item-description h2{
+    font: normal 20px "Open Sans"; margin: 0 0 15px;
+}
+.tab-news .item .content .item-description h3, .tab-apps .item .content .item-description h3{
+    font: normal 16px "Open Sans"; margin: 0 0 15px;
+}
+.tab-news .item .content .item-description p, .tab-apps .item .content .item-description p{
+    margin: 0 0 10px;
+}
+
+/*tab apps*/
+.tab-apps{
+    margin: 5px 0 20px;
+}
+.tab-apps .item{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    width: 460px;
+    float: left;
+    margin-right: 20px;
+}
+.tab-apps .item .thumb{
+    width: 220px; height: 220px;
+    float: left;
+}
+.tab-apps .item .thumb img{
+    width: 220px; height: 220px;
+}
+.tab-apps .item .content{
+    float: right;
+    height: 220px;
+    width: 220px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.tab-apps .item .content .item-title a{
+    /*font: 24px "Open Sans";*/
+    font: 24px Helvetica;
+    color: #000000;
+}
+.tab-apps .item .content .item-title a:hover{
+    color: orangered;
+}
+.tab-apps .item .content .item-meta, .tab-apps .item .content .nph,.tab-apps .item .content .price{
+    font: 13px "Open Sans";
+    color: #999999;
+    padding-top: 5px;
+}
+.tab-apps .item .content .item-meta a{
+    font: 14px "Open Sans";
+    color: #999999;
+}
+.tab-apps .item .content .rating{
+    color: #000; font-style: italic;
+}
+.tab-apps .item .content .rating .post-ratings{
+    display: inline;
+}
+.tab-apps .item .content .item-description{
+    font: 14px "Open Sans";
+    color: #666666;
+    padding-top: 5px;
+}
+
+/*sidebar*/
+
+.sidebar{
+    float: right;
+    width: 220px;
+    margin-top: 20px;
+}
+.rbox{
+    width: 220px;
+    margin-bottom: 15px;
+}
+.rbox .rbox-head{
+    background: #000;
+    color: #fff;
+    height: 24px;
+    padding: 10px 8px 6px;
+    /*font: 18px "Open Sans";*/
+    font:bold 12pt Helvetica; text-transform: uppercase;
+}
+.rbox .rbox-body{background: #ffffff;}
+.rbox ul{
+    margin: 0;
+    padding: 0;
+}
+.rbox ul li{
+    list-style: none;
+    background: url("images/li.png") no-repeat left 18px;
+    font: 14px "Open Sans";
+    color: #000;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #ccc;
+}
+.rbox ul li a{
+    font: 14px "Open Sans";
+    color: #000;
+}
+.rbox ul li a:hover{
+    color: orangered;
+}
+
+.rbox .item{
+    margin-top: 10px; padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.rbox .item .thumb{
+    float: left;
+}
+.rbox .item .content{
+    float: right;
+    width: 127px;
+    margin-left: 10px;
+}
+.rbox .item .content .title, .rbox .item .content .title a{
+    /*font: 14px "Open Sans";*/
+    font: bold 13px Helvetica;
+    color: #000;
+}
+.rbox .item .content .title a:hover{
+    color: orangered;
+}
+.rbox .item .content .nph,.rbox .item .content .price{
+    font: 11px "Open Sans";
+    color: #999999;
+}
+.rbox .item .content .rating{
+    color: #999999;
+}
+.rbox .item .content .rating .post-ratings{
+    display: inline;
+}
+
+
+/*footer*/
+#footer{
+    width: 100%;
+    height: 80px;
+    background: #000;
+}
+#footer .copyright{
+    color: #fff;
+    font: 13px Arial;
+    padding-top: 35px;
+    float: left;
+}
+#footer #backToTop{
+    float: right; background: url(images/backToTop.png) no-repeat; 
+    width: 40px; height: 40px; margin-top: 20px; cursor: pointer;
+}
+
+/* Breadcrums */
+.breadcrums{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #ccc;
+    font: 13px "Open Sans";
+}
+.breadcrums a{
+    color: #ccc;
+    font: 13px "Open Sans";
+}
+/*author*/
+.main-content .author{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.main-content .author .author-avatar{
+    float: left;
+    width: 140px; height: 140px;
+}
+.main-content .author .author-avatar img{
+    border: none;
+    width: 140px; height: 140px;
+}
+.main-content .author .author-info{
+    padding-left: 20px;
+    float: right;
+    width: 780px;
+    color: #999;
+    font: 14px "Open Sans";
+}
+.main-content .author .author-info .author-name{
+    font: 36px "Open Sans";
+    color: #000;
+}
+.main-content .author .author-info h1{
+    font: normal 36px "Open Sans";
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+.main-content .author .author-info span{
+    color: #000;
+}
+.main-content .author .author-info .author-joindate,.main-content .author .author-info .author-regency,.main-content .author .author-info .author-postcount{
+    padding-top: 8px;
+}
+.main-content .author .biographical_info{
+    font: 13px "Open Sans"; padding-top: 10px; border-top: 1px solid #CCCCCC; margin-top: 10px;
+}
+
+/*post details*/
+.main-content .post{}
+.post .post-title{
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.post h1.post-title{
+    font: normal 30px "Open Sans";
+    color: #000;
+}
+.post .post-meta{
+    float: left;
+    width: 940px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    font: 14px "Open Sans";
+}
+.post .post-meta .post-author{
+    color: #ccc;
+}
+.post .post-meta .post-author a{
+    color: #000;
+}
+.main-content .col-left{
+    float: left;
+    width: 220px;
+}
+.post .post-content{
+    float: right;
+    width: 700px;
+    margin-left: 20px;
+    color: #000;
+    /*font: 14px "Open Sans";*/
+    font: 14px Helvetica;
+}
+.post .post-content .wp-caption{max-width: 700px;}
+.post .post-content a:hover{
+    color: #000;
+}
+.post .post-content h1{font: normal 24px Helvetica; margin: 0 0 15px;}
+.post .post-content h2{font: normal 20px Helvetica; margin: 0 0 15px;}
+.post .post-content h3{font: normal 16px Helvetica; margin: 0 0 15px;}
+.post .post-content p{margin: 0 0 10px;}
+.post .post-content iframe{margin: 0 auto; display: block; max-width: 700px !important;}
+.post .post-content img{max-width: 680px;}
+.post .post-tag{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+}
+.post .post-tag span{
+    color: #000;
+    font: 10.5pt Helvetica;
+    text-transform: uppercase;
+}
+.post .post-tag, .post .post-tag a{
+    color: #31849A;
+    font: 10.5pt Helvetica;
+}
+.post .post-tag a:hover{color: #000;}
+
+.post-other{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.post-other .title-other{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    /*font: 24px "Open Sans";*/
+    font:bold 12pt Helvetica; text-transform: uppercase;
+    color: #000;
+}
+.post-other .title-other span{    
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+.post-other ul{
+    margin: 0;padding: 0;
+}
+.post-other ul li{
+    list-style: none;
+    background: url("images/li.png") no-repeat left center;
+    padding: 5px 0 5px 14px;
+}
+.post-other ul li a{
+    font: 16px "Open Sans";
+    color: #000;
+}
+.post-other ul li a:hover{
+    font: 16px "Open Sans";
+    color: orangered;
+}
+.post-other ul li span{
+    font: 15px "Open Sans";
+    color: #666666;
+}
+
+/*Block title*/
+.block-title{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    /*font: 24px "Open Sans";*/
+    font:bold 12pt Helvetica; text-transform: uppercase;
+    color: #000;
+}
+.block-title span{
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+.comment-box{margin-bottom: 10px;}
+
+/*Pagination*/
+.paging{text-align: right; margin: 20px 0; color: #fff; font: bold 16px "Open Sans";}
+.paging .wp-pagenavi a{padding: 10px 14px; color: #fff; background: #cccccc; margin-left: 10px;}
+.paging .wp-pagenavi a:hover{background: #0a2341;}
+.paging .wp-pagenavi span.current{background: #0a2341; margin-left: 10px; padding: 10px 14px; }
+.paging-sidebar{overflow: hidden; height: 20px; margin-top: 5px; padding: 5px 0;}
+.paging-sidebar .prev-page{
+    background: url(images/btn-prev.png) no-repeat center left; 
+    padding:1px 10px; text-indent: -9999px;
+}
+.paging-sidebar .prev-page:hover{
+    background: url(images/btn-prev-active.png) no-repeat center left; 
+}
+.paging-sidebar .next-page{ 
+    background: url(images/btn-next.png) no-repeat center right; 
+    padding:1px 10px;  text-indent: -9999px; margin-left: 5px;
+}
+.paging-sidebar .next-page:hover{ 
+    background: url(images/btn-next-active.png) no-repeat center right; 
+}
+
+/*404 ####################*/
+
+.page-404{width: 680px; margin: auto; height: 440px; min-height: 200px;}
+.page-404 img{ float: left;}
+.page-404 p{
+    width: 350px;
+    margin: 0; padding: 0;
+    float: right;
+    font: 24px "Open Sans";
+}
+.page-404 p a{
+    font: bold 24px "Open Sans";
+}
+
+/*apps details*/
+
+.post .app-info{
+    width: 200px;
+    float: left;
+    background: #f5f5f5;
+}
+.post .app-info .app-thumb img{
+    width: 200px;
+    border: none;
+}
+.post .app-info .app-meta{
+    padding: 10px;
+}
+.post .app-info .app-meta .app-name{
+    font: 18px "Open Sans";
+    color: #000000;
+}
+.post .app-info .app-meta .app-nph, .post .app-info .app-meta .app-price{
+    font: 14px "Open Sans";
+    color: #999999;
+    padding-top:5px;
+}
+.post .app-info .app-meta .app-rate{
+    text-align: center; padding-top:5px;
+}
+.post .app-info .app-meta .app-rate p{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    text-transform: uppercase;
+    font: bold 13px Arial;
+    color: #cccccc;
+    margin: 0;
+}
+.post .app-info .app-meta .app-rate .point{
+    font: 36px "Open Sans";
+    color: #000000;
+    padding: 10px 0;
+}
+.post .app-info .app-meta .app-rate .rating{
+    padding-bottom: 10px;
+}
+.post .app-info .app-meta .app-rate .rating .ratings .meta{
+    margin-left: 0;
+}
+
+/*app other*/
+
+.app-other{
+    margin-top: 15px;
+}
+.app-other .title-other{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    /*font: 24px "Open Sans";*/
+    font:bold 12pt Helvetica; text-transform: uppercase;
+    color: #000;
+}
+.app-other .title-other span{    
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+.app-other .item{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.app-other .thumb{
+    float: left;
+    width: 80px; height: 80px;
+}
+.app-other .info{
+    width: 200px;
+    text-align: left;
+    float: right;
+}
+.app-other .info .name, .app-other .info .price{
+}
+.app-other .info .name a{color: #000; font: bold 17px Helvetica;}
+.app-other .info .name a:hover{color: orangered;}
+
+/*### category apps ####*/
+.main-content .cat-name{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.main-content .cat-name span{
+    padding-top: 10px; padding-bottom: 8px;
+    border-bottom: 3px solid #000;
+    /*font: 30px "Open Sans";*/
+    font: 20pt Helvetica;
+    color: #000000;
+}
+.main-content .cat-items{
+    margin-top: 25px;
+}
+.main-content .cat-item{
+    width: 440px; 
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 25px;
+}
+.main-content .cat-item h3{
+    font: 18px "Open Sans";
+    color: #0d2544;
+    margin: 0;padding: 0;
+}
+.main-content .cat-item .cat-thumb{   
+    margin-top:15px; width: 440px; height: 120px;
+}
+
+/*apps item*/
+
+.main-content .apps-item{
+    margin-top: 25px;
+}
+.main-content .apps-item .app-item{
+    width: 300px; height: 190px;
+    float: left;
+    margin: 0 20px 20px 0;
+    overflow: hidden;
+}
+.main-content .apps-item .app-item .app-item-thumb{
+    width: 140px; height: 140px;
+    float: left;
+}
+.main-content .apps-item .app-item .app-item-info{
+    width: 140px;
+    padding-left: 20px;
+    float: right;
+}
+.main-content .apps-item .app-item .app-item-info{
+    font: 14px "Open Sans";
+    color: #999999;
+}
+.main-content .apps-item .app-item .app-item-info .name, 
+.main-content .apps-item .app-item .app-item-info .name a{
+    font: 18px "Open Sans";
+    color: #000000;
+}
+.main-content .apps-item .app-item .app-item-info .name a:hover{
+    color: orangered;
+}
+.main-content .apps-item .app-item .app-item-info .name,
+.main-content .apps-item .app-item .app-item-info .nph,
+.main-content .apps-item .app-item .app-item-info .price,
+.main-content .apps-item .app-item .app-item-info .vote,
+.main-content .apps-item .app-item .app-item-info .rate{
+    padding-bottom: 5px;
+}
+.item .info .rate .post-ratings, 
+.main-content .apps-item .app-item .app-item-info .vote .post-ratings{
+    display: inline;
+}
+.apps-item .app-item .app-item-description{
+    float: left; margin-top: 10px;
+    padding-right:10px;
+    font: 14px "Open Sans";
+    color: #000000;
+}
+.apps-item .app-item .app-item-description p{margin: 0 0 10px;}
+
+/*Register form*/
+.main-content .reg-form{
+    width: 340px;
+}
+.main-content .reg-form label{
+    display: block;
+    color: #666666;
+    font: 16px "Open Sans";
+    width: 160px;
+    margin-top: 10px;
+}
+.main-content .reg-form .input-text{
+    display: inline-block;
+    margin-top: 10px;
+    height: 50px;
+    border: 1px solid #CCCCCC;
+}
+.main-content .reg-form .input-text input{
+    border: medium none;
+    margin: 14px 0 0 10px;
+    font: 16px "Open Sans";
+    color: #666666;
+    width: 320px;
+    padding-right: 10px;
+}
+.main-content .reg-form .input-text select{
+    font: 16px "Open Sans";
+    color: #666666;
+    width: 50px;
+    padding-right: 10px;
+    border: medium none;
+    margin: 14px 0 0 10px;
+    width: 88px;
+}
+
+.main-content .reg-form input.input-dob{
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    height: 48px;
+    margin-top: 10px;
+    padding: 2px 0 0 10px;
+    width: 120px;
+}
+.reg-form .btn-bot .btn-submit{
+    background-color: #000;
+    border: medium none;
+    color: #FFFFFF;
+    float: right;
+    font: 18px "Open Sans";
+    margin: 0;
+    padding: 15px 35px;
+    cursor: pointer;
+}
+.reg-form .btn-bot .btn-submit:hover{
+    background-color: #333333;
+}
+.reg-form .btn-bot{
+    margin-top: 20px; margin-bottom: 10px;
+}
+.reg-form .btn-bot .links{
+    float: left;
+}
+.reg-form .btn-bot .links a{
+    color: #999999;
+    font: 13px Arial;
+    display: block; padding-bottom: 10px;
+}
+.reg-form .btn-bot .links a:hover{
+    color: #000;
+}
+.reg-form-title{
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font: 24px "Open Sans";
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+}
+.reg-form-title span {
+  border-bottom: 3px solid #000000;
+  padding-bottom: 10px;
+}
+
+.social_login{width: 342px;}
+.social_login .facebook{background: #1d5083 url(images/icons/fb.jpg) no-repeat left center; padding: 14px 0;}
+.social_login .facebook:hover{opacity: 0.8;}
+.social_login .fblogin a{color: #fff; font: 18px "Open Sans"; padding: 14px 67px;}
+.social_login .fbsignup a{color: #fff; font: 18px "Open Sans"; padding: 14px 80px;}
+
+.fb-follow{float: left;}
